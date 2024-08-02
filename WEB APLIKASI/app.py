@@ -66,12 +66,12 @@ def lakukan_forecast():
 
 # Fungsi untuk halaman Data
 def data_page():
-    st.title("Data Treker Solar Panel")
+    st.title("Data ketinggian air")
     data = list(collection.find())
 
     if data:
         df = pd.DataFrame(data)
-        st.write("Berikut adalah data dari panel surya Anda:")
+        st.write("Berikut adalah data ketinggian Anda:")
         chart_data = pd.DataFrame(np.random.randn(10, 1), columns=["jarak"])
         st.dataframe(df)
         st.area_chart(chart_data)
@@ -94,7 +94,7 @@ def notification_page():
 # Fungsi untuk halaman Informasi
 def info_page():
     st.title("Informasi")
-    st.write("Informasi umum tentang cara kerja dari Treker Solar Panel:")
+    st.write("Informasi umum tentang cara kerja dari Ketinggian air:")
     # Tambahkan informasi umum di sini
 
 # Fungsi utama untuk menjalankan aplikasi
